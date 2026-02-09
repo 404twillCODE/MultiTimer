@@ -1,0 +1,48 @@
+{
+  "name": "multitimer",
+  "version": "1.0.0",
+  "description": "Multi-timer desktop app — Apple Clock style",
+  "main": "./out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "start": "electron-vite preview",
+    "build:win": "npm run build && electron-builder --win",
+    "build:win:dir": "npm run build && node scripts/build-icon.cjs && electron-builder --win --dir && node scripts/postbuild-win.mjs"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "electron-vite": "^2.0.0",
+    "png-to-ico": "^3.0.1",
+    "rcedit": "^5.0.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.6.0",
+    "vite": "^5.4.0"
+  },
+  "build": {
+    "appId": "com.multitimer.app",
+    "productName": "MultiTimer",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "icon.ico",
+      "signAndEditExecutable": false
+    },
+    "portable": {
+      "artifactName": "MultiTimer.exe"
+    }
+  }
+}

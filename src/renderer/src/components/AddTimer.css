@@ -1,0 +1,147 @@
+.add-timer {
+  padding: 16px 0;
+  animation: fade-in 0.25s ease;
+}
+
+.add-timer-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.add-timer-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.add-timer-preset {
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.add-timer-preset:hover:not(:disabled) {
+  background: var(--bg-hover);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.add-timer-preset:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.add-timer-preset:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.add-timer-custom {
+  margin-top: 4px;
+}
+
+.add-timer-custom-toggle {
+  padding: 8px 14px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.add-timer-custom-toggle:hover:not(:disabled) {
+  background: var(--accent-soft);
+}
+
+.add-timer-custom-toggle:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.add-timer-custom-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  animation: scale-in 0.2s ease;
+}
+
+.add-timer-input {
+  width: 52px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1rem;
+  text-align: center;
+  transition: border-color 0.15s ease;
+}
+
+.add-timer-input-hr {
+  width: 48px;
+}
+
+.add-timer-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.add-timer-input::-webkit-outer-spin-button,
+.add-timer-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.add-timer-input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.add-timer-sep {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.add-timer-add-btn {
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.add-timer-add-btn:hover {
+  filter: brightness(1.1);
+}
+
+.add-timer-add-btn:active {
+  transform: scale(0.98);
+}
+
+.add-timer-cancel {
+  padding: 10px 14px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  transition: color 0.15s ease;
+}
+
+.add-timer-cancel:hover {
+  color: var(--text);
+}
